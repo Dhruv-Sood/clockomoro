@@ -14,7 +14,7 @@ function Navbar() {
       <nav className="navbar flex bg-white py-4 px-8 w-full justify-between items-center relative">
 
         {/* LOGO */}
-        <div className="text-4xl text-black">CLOCKOMORO</div>
+        <div className=" md:text-4xl lg:text-4xl text-black">CLOCKOMORO</div>
 
         <div
           className={`md:hidden cursor-pointer transform transition-transform hover:scale-110`}
