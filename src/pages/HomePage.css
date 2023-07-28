@@ -1,0 +1,14 @@
+.gradient{
+
+    background-image: linear-gradient(to right , #414244 0%, #9a5cc4 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    
+
+}
+@media only screen and (min-width: 772px) {
+    .h-remaining{
+        height: calc(100vh - 64px);
+    }
+}
