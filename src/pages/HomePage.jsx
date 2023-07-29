@@ -1,10 +1,15 @@
+import { useContext } from "react";
 import Navbar from "../components/Navbar";
 import "./HomePage.css";
+import { DarkModeContext } from "../contexts/DarkModeContext";
 function HomePage() {
+
+  const {darkMode} = useContext(DarkModeContext)
+
   return (
     <>
       <Navbar />
-      <div className="h-remaining p-5 sm:p-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-10">
+      <div className={`h-remaining p-5 sm:p-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 ${darkMode? "bg-black text-white" : "bg-white text-black"}`}>
         <div className="flex flex-col gap-5 sm:gap-10 cutive-mono items-center">
 
           {/* WEB_TITLE */}
