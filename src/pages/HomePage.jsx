@@ -9,7 +9,7 @@ function HomePage() {
   return (
     <>
       <Navbar />
-      <div className={`h-remaining p-5 sm:p-10 flex flex-col-reverse lg:flex-row items-center justify-between gap-10 ${darkMode? "bg-black text-white" : "bg-white text-black"}`}>
+      <div className={`h-remaining p-5 sm:p-10 flex flex-col-reverse lg:flex-row items-center justify-around lg:justify-between gap-8 lg:gap-10 ${darkMode? "bg-black text-white" : "bg-white text-black"}`}>
         <div className="flex flex-col gap-5 sm:gap-10 cutive-mono items-center">
 
           {/* WEB_TITLE */}

@@ -8,6 +8,10 @@
   font-family: 'Cutive Mono', monospace;
 }
 
+.h-remaining{
+  height: calc(100vh - 64px);
+}
+
 .hover-effect{
   @apply hover:scale-[1.01] hover:cursor-pointer transition-all duration-200;
 }

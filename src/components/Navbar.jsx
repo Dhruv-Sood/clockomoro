@@ -27,9 +27,8 @@ function Navbar() {
   return (
     <>
       <nav
-        className={`navbar flex py-4 px-8 w-full justify-between items-center relative ${
-          darkMode ? " bg-black text-white" : "bg-white text-black"
-        }`}
+        className={`navbar flex py-4 px-6 md:px-8 w-full justify-between items-center relative ${darkMode ? " bg-black text-white" : "bg-white text-black"
+          }`}
       >
         {/* LOGO */}
         <div className="text-2xl sm:text-3xl md:text-4xl hover-effect">
@@ -42,12 +41,30 @@ function Navbar() {
             }}
           />
         </div>
+        
 
-        <div
-          className={`md:hidden cursor-pointer transform transition-transform hover:scale-110`}
-          onClick={toggleMenu}
-        >
-          <GiHamburgerMenu className="text-2xl" />
+        {/* HAMBURGER MENU */}
+        <div className=" md:hidden flex gap-4 items-center justify-center">
+          <div
+            className={` cursor-pointer transform transition-transform hover:scale-110`}
+            onClick={toggleMenu}
+          >
+            <GiHamburgerMenu className="text-2xl" />
+          </div>
+          <div>
+            {darkMode ? (
+              <GoSun
+                className="text-[26px] hover:cursor-pointer hover:scale-110 transition-all duration-200"
+                onClick={toggleDarkMode}
+              />
+            ) : (
+              <CiDark
+                className="text-[26px] hover:cursor-pointer hover:scale-110 transition-all duration-200"
+                onClick={toggleDarkMode}
+              />
+            )}
+          </div>
+
         </div>
 
         <div className={`hidden md:flex items-center gap-8`}>
