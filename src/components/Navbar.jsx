@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CiDark } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
+import Typewriter from 'typewriter-effect';
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -9,12 +10,28 @@ function Navbar() {
     setShowMenu((prevShowMenu) => !prevShowMenu);
   };
 
+  // Timeout function to remove cursor once the logo animation ends.
+  useEffect(() => {
+    setTimeout(() => {
+      document.getElementsByClassName('Typewriter__cursor')[0].innerHTML = '';
+    }, 2000);
+  }, []);
+
   return (
     <>
       <nav className="navbar flex bg-white py-4 px-8 w-full justify-between items-center relative">
 
         {/* LOGO */}
-        <div className=" md:text-4xl lg:text-4xl text-black">CLOCKOMORO</div>
+        <div className=" md:text-4xl lg:text-4xl text-black">
+          <Typewriter
+            options={{
+              autoStart: true,
+              loop: false,
+              delay: 50,
+              strings: "CLOCKOMORO",
+            }}
+          />
+        </div>
 
         <div
           className={`md:hidden cursor-pointer transform transition-transform hover:scale-110`}
