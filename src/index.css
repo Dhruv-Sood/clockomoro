@@ -7,3 +7,7 @@
 .navbar{
   font-family: 'Cutive Mono', monospace;
 }
+
+.hover-effect{
+  @apply hover:scale-[1.01] hover:cursor-pointer transition-all duration-200;
+}

@@ -14,7 +14,7 @@ function Navbar() {
   useEffect(() => {
     setTimeout(() => {
       document.getElementsByClassName('Typewriter__cursor')[0].innerHTML = '';
-    }, 2000);
+    }, 1500);
   }, []);
 
   return (
@@ -22,12 +22,12 @@ function Navbar() {
       <nav className="navbar flex bg-white py-4 px-8 w-full justify-between items-center relative">
 
         {/* LOGO */}
-        <div className=" md:text-4xl lg:text-4xl text-black">
+        <div className=" md:text-4xl lg:text-4xl text-black hover-effect">
           <Typewriter
             options={{
               autoStart: true,
               loop: false,
-              delay: 50,
+              delay: 100,
               strings: "CLOCKOMORO",
             }}
           />
@@ -43,14 +43,14 @@ function Navbar() {
         <div className={`hidden md:flex items-center gap-8`}>
           {/* NAV LINKS */}
           <ul className="flex gap-4 text-2xl">
-            <li className="transition-colors duration-300 ease-in-out hover:text-blue-500">Home</li>
-            <li className="transition-colors duration-300 ease-in-out hover:text-blue-500">About</li>
-            <li className="transition-colors duration-300 ease-in-out hover:text-blue-500">Contribute</li>
+            <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">Home</li>
+            <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">About</li>
+            <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">Contribute</li>
           </ul>
 
           {/* DARKMODE ICON */}
           <div>
-            <CiDark className="text-[28px]" />
+            <CiDark className="text-[28px] hover:cursor-pointer hover:scale-110 transition-all duration-200" />
           </div>
         </div>
 
