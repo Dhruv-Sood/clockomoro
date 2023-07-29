@@ -4,7 +4,7 @@ function HomePage() {
   return (
     <>
       <Navbar />
-      <div class="h-remaining p-5 sm:p-10 flex items-center justify-between gap-10">
+      <div className="h-remaining p-5 sm:p-10 flex items-center justify-between gap-10">
         <div className="flex flex-col gap-5 sm:gap-10 cutive-mono items-center">
           <div>
             <h1 className="text-3xl sm:text-5xl tracking-wider font-bold gradient">
