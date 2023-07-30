@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
 import "./HomePage.css";
 import { DarkModeContext } from "../contexts/DarkModeContext";
@@ -14,7 +14,7 @@ function HomePage() {
 
           {/* WEB_TITLE */}
           <div>
-            <h1 className="text-3xl sm:text-5xl tracking-wider font-bold gradient">
+            <h1 className={`text-3xl sm:text-5xl tracking-wider font-bold gradient`}>
               CLOCKOMORO
             </h1>
           </div>
@@ -27,7 +27,9 @@ function HomePage() {
             involves breaking work into intervals, typically 25 minutes long,
             separated by short breaks.
           </div>
-          <div className="cutive-mono p-4 bg-orange-300 rounded-2xl w-[120px] grid place-content-center hover:opacity-70 hover:cursor-pointer transition-all duration-[0.2s]">
+
+          {/* TIMER BUTTON */}
+          <div className={`tektur hover-effect tracking-wider p-2 w-[120px] grid place-content-center hover:opacity-70 hover:cursor-pointer transition-all duration-[0.2s] skew-x-[-12deg] rounded-lg font-semibold ${darkMode?"bg-white text-black" : "bg-red-400 text-white" }`}>
             Timer
           </div>
         </div>
