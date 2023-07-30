@@ -98,7 +98,7 @@ function Navbar() {
         </div>
 
         {showMenu && (
-          <div className="md:hidden absolute top-16 right-8 bg-white border rounded shadow-lg">
+          <div className={`md:hidden absolute top-16 right-8 border rounded shadow-lg ${darkMode ? " bg-black text-white" : "bg-white text-black"}`}>
             <ul className="flex flex-col gap-4 text-2xl p-4">
               <li className="transition-colors duration-300 ease-in-out hover:text-blue-500">
                 Home
