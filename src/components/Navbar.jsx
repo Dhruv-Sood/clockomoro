@@ -77,7 +77,7 @@ function Navbar() {
               About
             </li>
             <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
-              Contribute
+              <a href="https://github.com/Dhruv-Sood/clockomoro" target="_blank" className=" decoration-0">Contribute</a>
             </li>
           </ul>
 
