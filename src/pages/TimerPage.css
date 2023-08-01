@@ -1,0 +1,21 @@
+.shadow-custom{
+    /* Neon border */
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 40px rgb(235, 189, 180), 0 0 10px #0ff, 0 0 10px #0ff, 0 0 10px #0ff;
+}
+.gradient-red{
+
+    background-image: linear-gradient(to right , #ed4242 0%, #9a5cc4 85%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+
+
+
+}
+.gradient-underline{
+
+    background-image: linear-gradient(to right , #ed4242 0%, #9a5cc4 85%);
+
+
+
+}
