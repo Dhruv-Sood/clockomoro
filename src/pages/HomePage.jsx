@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import Navbar from "../components/Navbar";
 import "./HomePage.css";
 import { DarkModeContext } from "../contexts/DarkModeContext";
+import { Link } from "react-router-dom";
 function HomePage() {
 
   const {darkMode} = useContext(DarkModeContext)
@@ -29,9 +30,11 @@ function HomePage() {
           </div>
 
           {/* TIMER BUTTON */}
+          <Link to="/timer">
           <div className={`tektur hover-effect tracking-wider p-2 w-[120px] grid place-content-center hover:opacity-70 hover:cursor-pointer transition-all duration-[0.2s] skew-x-[-12deg] rounded-lg font-semibold ${darkMode?"bg-white text-black" : "bg-red-400 text-white" }`}>
             Timer
           </div>
+          </Link>
         </div>
 
         {/* CLOCK IMAGE */}
