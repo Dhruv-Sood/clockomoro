@@ -4,6 +4,7 @@ import { GoSun } from "react-icons/go";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Typewriter from "typewriter-effect";
 import { DarkModeContext } from "../contexts/DarkModeContext";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -31,6 +32,7 @@ function Navbar() {
           }`}
       >
         {/* LOGO */}
+        <Link to="/">
         <div className="text-2xl sm:text-3xl md:text-4xl hover-effect">
           <Typewriter
             options={{
@@ -41,6 +43,7 @@ function Navbar() {
             }}
           />
         </div>
+        </Link>
         
 
         {/* HAMBURGER MENU */}
@@ -70,9 +73,11 @@ function Navbar() {
         <div className={`hidden md:flex items-center gap-8`}>
           {/* NAV LINKS */}
           <ul className="flex gap-4 text-2xl">
+            <Link to="/" >
             <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
               Home
             </li>
+            </Link>
             <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
               About
             </li>
@@ -100,9 +105,11 @@ function Navbar() {
         {showMenu && (
           <div className={`md:hidden absolute top-16 right-8 border rounded shadow-lg ${darkMode ? " bg-black text-white" : "bg-white text-black"}`}>
             <ul className="flex flex-col gap-4 text-2xl p-4">
+              <Link to="/" >
               <li className="transition-colors duration-300 ease-in-out hover:text-blue-500">
                 Home
               </li>
+              </Link>
               <li className="transition-colors duration-300 ease-in-out hover:text-blue-500">
                 About
               </li>
