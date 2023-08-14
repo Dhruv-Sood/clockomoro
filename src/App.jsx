@@ -5,6 +5,8 @@ import "./App.css";
 import HomePage from "./pages/HomePage";
 import TimerPage from "./pages/TimerPage";
 import { Route, Routes } from "react-router-dom";
+import { About } from "./pages/About";
+import NotFound from "./components/NotFound";
 
 function App() {
   return (
@@ -12,9 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/timer" element={<TimerPage />} />
-      
-
-      
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   );

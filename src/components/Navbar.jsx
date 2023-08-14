@@ -5,6 +5,28 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import Typewriter from "typewriter-effect";
 import { DarkModeContext } from "../contexts/DarkModeContext";
 import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+
+// --------------------------------------------------------------------NavLinkItem--
+const NavLinkItem = (props) => {
+  return (
+    <Link
+      rel="noreferrer"
+      to={props.path}
+      target={props.isTarget ? "_blank" : "_parent"}
+    >
+      <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
+        {props.name}
+      </li>
+    </Link>
+  );
+};
+NavLinkItem.propTypes = {
+  path: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  isTarget: PropTypes.boolean,
+};
+// ----------------------------------------------------------------------
 
 function Navbar() {
   const [showMenu, setShowMenu] = useState(false);
@@ -28,23 +50,23 @@ function Navbar() {
   return (
     <>
       <nav
-        className={`navbar flex py-4 px-6 md:px-8 w-full justify-between items-center relative ${darkMode ? " bg-black text-white" : "bg-white text-black"
-          }`}
+        className={`navbar flex py-4 px-6 md:px-8 w-full justify-between items-center relative ${
+          darkMode ? " bg-black text-white" : "bg-white text-black"
+        }`}
       >
         {/* LOGO */}
         <Link to="/">
-        <div className="text-2xl sm:text-3xl md:text-4xl hover-effect">
-          <Typewriter
-            options={{
-              autoStart: true,
-              loop: false,
-              delay: 100,
-              strings: "CLOCKOMORO",
-            }}
-          />
-        </div>
+          <div className="text-2xl sm:text-3xl md:text-4xl hover-effect">
+            <Typewriter
+              options={{
+                autoStart: true,
+                loop: false,
+                delay: 100,
+                strings: "CLOCKOMORO",
+              }}
+            />
+          </div>
         </Link>
-        
 
         {/* HAMBURGER MENU */}
         <div className=" md:hidden flex gap-4 items-center justify-center">
@@ -67,23 +89,18 @@ function Navbar() {
               />
             )}
           </div>
-
         </div>
 
         <div className={`hidden md:flex items-center gap-8`}>
           {/* NAV LINKS */}
           <ul className="flex gap-4 text-2xl">
-            <Link to="/" >
-            <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
-              Home
-            </li>
-            </Link>
-            <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
-              About
-            </li>
-            <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
-              <a href="https://github.com/Dhruv-Sood/clockomoro" rel="noreferrer" target="_blank" className=" decoration-0">Contribute</a>
-            </li>
+            <NavLinkItem name="Home" path="/" />
+            <NavLinkItem name="about" path="/about" />
+            <NavLinkItem
+              name="Contribute"
+              path="https://github.com/Dhruv-Sood/clockomoro"
+              isTarget
+            />
           </ul>
 
           {/* DARKMODE/LIGHTMODE ICON */}
@@ -103,19 +120,19 @@ function Navbar() {
         </div>
 
         {showMenu && (
-          <div className={`md:hidden absolute top-16 right-8 border rounded shadow-lg ${darkMode ? " bg-black text-white" : "bg-white text-black"}`}>
+          <div
+            className={`md:hidden absolute top-16 right-8 border rounded shadow-lg ${
+              darkMode ? " bg-black text-white" : "bg-white text-black"
+            }`}
+          >
             <ul className="flex flex-col gap-4 text-2xl p-4">
-              <Link to="/" >
-              <li className="transition-colors duration-300 ease-in-out hover:text-blue-500">
-                Home
-              </li>
-              </Link>
-              <li className="transition-colors duration-300 ease-in-out hover:text-blue-500">
-                About
-              </li>
-              <li className="transition-colors duration-300 ease-in-out hover:text-blue-500">
-                <a href="https://github.com/Dhruv-Sood/clockomoro" rel="noreferrer" target="_blank" className=" decoration-0">Contribute</a>
-              </li>
+              <NavLinkItem name="Home" path="/" />
+              <NavLinkItem name="about" path="/about" />
+              <NavLinkItem
+                name="Contribute"
+                path="https://github.com/Dhruv-Sood/clockomoro"
+                isTarget
+              />
             </ul>
           </div>
         )}
