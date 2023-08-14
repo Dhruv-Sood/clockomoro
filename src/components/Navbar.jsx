@@ -82,7 +82,7 @@ function Navbar() {
               About
             </li>
             <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
-              <a href="https://github.com/Dhruv-Sood/clockomoro" target="_blank" className=" decoration-0">Contribute</a>
+              <a href="https://github.com/Dhruv-Sood/clockomoro" rel="noreferrer" target="_blank" className=" decoration-0">Contribute</a>
             </li>
           </ul>
 
@@ -114,7 +114,7 @@ function Navbar() {
                 About
               </li>
               <li className="transition-colors duration-300 ease-in-out hover:text-blue-500">
-                Contribute
+                <a href="https://github.com/Dhruv-Sood/clockomoro" rel="noreferrer" target="_blank" className=" decoration-0">Contribute</a>
               </li>
             </ul>
           </div>
