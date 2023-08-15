@@ -134,8 +134,16 @@ function Navbar() {
             }`}
           >
             <ul className="flex flex-col gap-4 text-2xl p-4">
-              <NavLinkItem name="Home" path="/" />
-              <NavLinkItem name="about" path="/about" />
+              <Link to="/">
+                <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
+                  Home
+                </li>
+              </Link>
+              <Link to="/about">
+                <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
+                  About
+                </li>
+              </Link>
               <NavLinkItem
                 name="Contribute"
                 path="https://github.com/Dhruv-Sood/clockomoro"

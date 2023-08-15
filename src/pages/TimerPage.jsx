@@ -9,7 +9,6 @@ function TimerPage() {
 
   return (
     <>
-      <Navbar />
       <div
         className={`h-remaining grid place-content-center p-4 ${
           darkMode ? "bg-black text-white" : "bg-white text-black"
@@ -25,7 +24,11 @@ function TimerPage() {
             </div>
 
             <div className="h-[312px] flex justify-center items-center w-full">
-                          <div className={`cutive px-4 py-2 rounded-2xl  hover:scale-[1.04] hover:cursor-pointer transition-all duration-[0.35s] ${darkMode ? "bg-white text-black" : "bg-red-400 text-white"}`}>
+              <div
+                className={`cutive px-4 py-2 rounded-2xl  hover:scale-[1.04] hover:cursor-pointer transition-all duration-[0.35s] ${
+                  darkMode ? "bg-white text-black" : "bg-red-400 text-white"
+                }`}
+              >
                 START TIMER
               </div>
             </div>
