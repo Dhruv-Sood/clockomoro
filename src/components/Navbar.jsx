@@ -11,9 +11,9 @@ import PropTypes from "prop-types";
 const NavLinkItem = (props) => {
   return (
     <Link
-      rel="noreferrer"
       to={props.path}
       target={props.isTarget ? "_blank" : "_parent"}
+      rel="noreferrer"
     >
       <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
         {props.name}
@@ -94,8 +94,16 @@ function Navbar() {
         <div className={`hidden md:flex items-center gap-8`}>
           {/* NAV LINKS */}
           <ul className="flex gap-4 text-2xl">
-            <NavLinkItem name="Home" path="/" />
-            <NavLinkItem name="about" path="/about" />
+            <Link to="/">
+              <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
+                Home
+              </li>
+            </Link>
+            <Link to="/about">
+              <li className="transition-colors hover:text-blue-500 hover:cursor-pointer hover-effect duration-100">
+                About
+              </li>
+            </Link>
             <NavLinkItem
               name="Contribute"
               path="https://github.com/Dhruv-Sood/clockomoro"
