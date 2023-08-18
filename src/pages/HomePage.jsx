@@ -1,21 +1,23 @@
-import { useContext, useState } from "react";
-import Navbar from "../components/Navbar";
+import { useContext } from "react";
 import "./HomePage.css";
 import { DarkModeContext } from "../contexts/DarkModeContext";
 import { Link } from "react-router-dom";
 function HomePage() {
-
-  const {darkMode} = useContext(DarkModeContext)
+  const { darkMode } = useContext(DarkModeContext);
 
   return (
     <>
-      <Navbar />
-      <div className={`h-remaining p-5 sm:p-10 flex flex-col-reverse lg:flex-row items-center justify-around lg:justify-between gap-8 lg:gap-10 ${darkMode? "bg-black text-white" : "bg-white text-black"}`}>
+      <div
+        className={`h-remaining p-5 sm:p-10 flex flex-col-reverse lg:flex-row items-center justify-around lg:justify-between gap-8 lg:gap-10 ${
+          darkMode ? "bg-black text-white" : "bg-white text-black"
+        }`}
+      >
         <div className="flex flex-col gap-5 sm:gap-10 cutive-mono items-center">
-
           {/* WEB_TITLE */}
           <div>
-            <h1 className={`text-3xl sm:text-5xl tracking-wider font-bold gradient`}>
+            <h1
+              className={`text-3xl sm:text-5xl tracking-wider font-bold gradient`}
+            >
               CLOCKOMORO
             </h1>
           </div>
@@ -31,15 +33,23 @@ function HomePage() {
 
           {/* TIMER BUTTON */}
           <Link to="/timer">
-          <div className={`tektur hover-effect tracking-wider p-2 w-[120px] grid place-content-center hover:opacity-70 hover:cursor-pointer transition-all duration-[0.2s] skew-x-[-12deg] rounded-lg font-semibold ${darkMode?"bg-white text-black" : "bg-red-400 text-white" }`}>
-            Timer
-          </div>
+            <div
+              className={`tektur hover-effect tracking-wider p-2 w-[120px] grid place-content-center hover:opacity-70 hover:cursor-pointer transition-all duration-[0.2s] skew-x-[-12deg] rounded-lg font-semibold ${
+                darkMode ? "bg-white text-black" : "bg-red-400 text-white"
+              }`}
+            >
+              Timer
+            </div>
           </Link>
         </div>
 
         {/* CLOCK IMAGE */}
         <div className="lg:block">
-          <img src="/clock.png" alt="" className="min-w-[200px] w-[300px] sm:min-w-[400px] sm:w-[400px] rounded-xl" />
+          <img
+            src="/clock.png"
+            alt=""
+            className="min-w-[200px] w-[300px] sm:min-w-[400px] sm:w-[400px] rounded-xl"
+          />
         </div>
       </div>
     </>

@@ -9,7 +9,6 @@ function TimerPage() {
 
   return (
     <>
-      <Navbar />
       <div
         className={`h-remaining grid place-content-center p-4 ${
           darkMode ? "bg-black text-white" : "bg-white text-black"
