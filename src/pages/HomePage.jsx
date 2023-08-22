@@ -38,7 +38,7 @@ function HomePage() {
                 darkMode ? "bg-white text-black" : "bg-red-400 text-white"
               }`}
             >
-              Timer
+              Start Timer
             </div>
           </Link>
         </div>

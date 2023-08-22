@@ -1,11 +1,12 @@
 import Navbar from "../components/Navbar";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { DarkModeContext } from "../contexts/DarkModeContext";
 import "./TimerPage.css";
 import Timer from "../components/Timer";
 function TimerPage() {
   const { darkMode } = useContext(DarkModeContext);
+  const [isPaused, setIsPaused] = useState(false);
 
   return (
     <>
@@ -33,8 +34,13 @@ function TimerPage() {
               </div>
             </div> */}
 
-            <Timer />
-            <button className="btn btn-success"> Stop timer</button>
+            <Timer isPaused={isPaused} setIsPaused={setIsPaused} />
+            <button
+              className="btn btn-success"
+              onClick={() => setIsPaused((prev) => !prev)}
+            >
+              {isPaused ? "Resume Timer" : "Stop timer"}
+            </button>
           </div>
         </div>
       </div>
