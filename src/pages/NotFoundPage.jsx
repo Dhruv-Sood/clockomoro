@@ -29,7 +29,7 @@ const NotFound = () => {
           </Link>
         </div>
         <div className="not-found-image">
-          <img src="/notFoundPage.png" width={900} alt="Not Found"/>
+          <img src="/notFoundPage.png" className="max-w-[500px]" alt="Not Found"/>
         </div>        
       </div>
     </>
