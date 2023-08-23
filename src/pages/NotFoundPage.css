@@ -1,0 +1,5 @@
+@media only screen and (max-width: 772px) {
+    .not-found-image{
+        display: none;
+    }
+}

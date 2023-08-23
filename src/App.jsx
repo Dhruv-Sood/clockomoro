@@ -3,7 +3,7 @@ import HomePage from "./pages/HomePage";
 import TimerPage from "./pages/TimerPage";
 import { Route, Routes } from "react-router-dom";
 import { About } from "./pages/About";
-import NotFound from "./components/NotFound";
+import NotFoundPage from "./pages/NotFoundPage";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/timer" element={<TimerPage />} />
         <Route path="/about" element={<About />} />
-        <Route path="*" element={<NotFound />} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </>
   );
